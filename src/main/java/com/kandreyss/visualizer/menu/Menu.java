@@ -5,6 +5,7 @@ import com.kandreyss.sorts.simple.BubbleSort;
 import com.kandreyss.sorts.simple.InsertionsSort;
 import com.kandreyss.sorts.simple.PermutationSort;
 import com.kandreyss.sorts.simple.SelectionSort;
+import com.kandreyss.sorts.smart.HeapSort;
 import com.kandreyss.sorts.smart.MergeSort;
 import com.kandreyss.sorts.smart.QuickSort;
 import com.kandreyss.sorts.smart.ShellSort;
@@ -76,6 +77,7 @@ public class Menu {
         factories.put("Merge", MergeSort::new);
         factories.put("Quick", QuickSort::new);
         factories.put("Shell", ShellSort::new);
+        factories.put("Heap", HeapSort::new);
         SortPanel panel = new SortPanel();
         return new Menu(factories, panel);
     }

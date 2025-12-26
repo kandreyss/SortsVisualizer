@@ -1,3 +1,5 @@
+# Проект для визуализации алгоритмов сортировки
+
 # SortsVisualizer
 
 Небольшой учебный проект на Java — визуализатор алгоритмов сортировки. Главная идея проекта — показать наглядно, как работают базовые алгоритмы сортировки, дать возможность увидеть поведение массивов при разных операциях (сравнениях, обменах) и почувствовать разницу в подходах.
@@ -14,4 +16,68 @@
 - В коде реализована логика отображения процесса сортировки и основные механизмы для сравнения разных подходов.
 - Это учебный, компактный проект — всё сделано так, чтобы было просто смотреть и разбирать.
 
-Автор: kandreyss
+## Алгоритмы сортировки
+
+В проекте реализованы следующие алгоритмы:
+- Bubble Sort (пузырьковая сортировка)
+- Insertion Sort (сортировка вставками)
+- Selection Sort (сортировка выбором)
+- Merge Sort (сортировка слиянием)
+- Quick Sort (быстрая сортировка, Хоар)
+- Shell Sort (сортировка Шелла)
+- Permutations Sort (полный перебор)
+- Heap Sort (пирамидальная сортировка)
+
+---
+
+## Структура проекта
+
+```
+src
+└── main
+    └── java
+        └── com
+            └── kandreyss
+                ├── Main.java
+                ├── sorts
+                │   ├── simple
+                │   │   ├── BubbleSort.java
+                │   │   ├── InsertionsSort.java
+                │   │   ├── PermutationSort.java
+                │   │   └── SelectionSort.java
+                │   ├── smart
+                │   │   ├── HeapSort.java
+                │   │   ├── MergeSort.java
+                │   │   ├── QuickSort.java
+                │   │   └── ShellSort.java
+                │   ├── Sort.java
+                │   └── SortListener.java
+                ├── utils
+                │   ├── Metric.java
+                │   └── Shuffler.java
+                └── visualizer
+                    ├── menu
+                    │   └── Menu.java
+                    ├── SortPanel.java
+                    └── SortVisualizer.java
+---
+
+## Как собрать и запустить
+
+1. **Компиляция:**
+   ```sh
+   javac -d out $(find ./src/main/java -name "*.java")
+   ```
+
+2. **Запуск:**
+   ```sh
+   java -cp out com.kandreyss.Main
+   ```
+
+3. **Сохранение результата в файл:**
+   ```sh
+   java -cp out com.kandreyss.Main > output.txt
+   ```
+
+---
+**Автор:** kandreyss

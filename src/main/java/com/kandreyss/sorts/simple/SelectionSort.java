@@ -17,7 +17,7 @@ public class SelectionSort extends Sort {
             minIdx = i;
             for(int j = i + 1; j < n; j++) {
                 metric.incCompairs();
-                notifyStep(tmp, i, minIdx);
+                notifyStep(tmp, j, minIdx);
                 if(tmp[j] < tmp[minIdx])
                     minIdx = j;             
             }
@@ -25,6 +25,7 @@ public class SelectionSort extends Sort {
             swap(tmp, i, minIdx);
         }
 
+        notifyStep(tmp, -1, -1);
         return tmp;
     }
 }

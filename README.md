@@ -60,7 +60,7 @@ src
                     │   └── Menu.java
                     ├── SortPanel.java
                     └── SortVisualizer.java
----
+```
 
 ## Как собрать и запустить
 
